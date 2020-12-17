@@ -21,6 +21,7 @@ export class SearchComponent implements OnInit{
     this.seachService.bussinessSubject$.subscribe(data => {
       if(data !== undefined) {
         this.displayItems = data;
+        console.log(data);
       }
     });
   }
@@ -29,16 +30,19 @@ export class SearchComponent implements OnInit{
     this.bussinesService.listen(bussines);
     this.loc.navigate(['bussines']);
   }
+  seeMap(url) {
+    window.open(url);
+  }
 
 }
 
 export class Bussiness { 
-name: string;
-location:any;
-logo:string;
-country: string;
-description: string;
-id: string;
+public name: string;
+public location:string;
+public logo:string;
+public country: string;
+public description: string;
+public id: string;
 
 
 }

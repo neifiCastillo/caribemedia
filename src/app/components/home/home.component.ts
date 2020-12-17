@@ -12,6 +12,7 @@ import { SearchService } from '../search/search.service';
 export class HomeComponent implements OnInit {
   
   showSearchResult: boolean = false;
+  places: any[] = [];
 
   constructor( private api: ApiService, private searchService: SearchService) { }
   ngOnInit(): void {
@@ -26,10 +27,14 @@ export class HomeComponent implements OnInit {
     result = data.filter(x => x.name.toLowerCase().includes(termino));
 
    if(result !== undefined && result.length > 0) {
-    this.searchService.listen(result);
+    result.forEach(e => {
+      this.places.push(e);
+    })
+    this.searchService.listen(this.places  );
     this.showSearchResult = true;  
  }
    });
+
  }
 
 

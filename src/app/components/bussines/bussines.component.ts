@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Bussiness } from '../search/search.component';
 import { BussinesService } from './bussines.service';
 
@@ -11,26 +12,25 @@ export class BussinesComponent implements OnInit {
 
   showInfo = false;
   selecterBussines: Bussiness;
-  arr: Bussiness[] = [];
-
-  constructor(private bussinesServices : BussinesService) { }
+  
+  constructor(private bussinesServices : BussinesService, private nav: Router) { }
 
   ngOnInit(): void {
-    this.bussinesServices.bussinesSubject$.subscribe(bus => {
-      if(bus !== undefined) {
-      this.selecterBussines = {
-        name: bus.name,
-        country: bus.country,
-        description: bus.description,
-        id: bus.id,
-        location: bus.location,
-        logo: bus.logo
-      };
-      this.arr.push(this.selecterBussines);
+    this.selecterBussines = this.bussinesServices.selectedBussiness;
+    if(this.selecterBussines !== undefined){
       this.showInfo = true;
-      console.log(this.selecterBussines);
-      }
-    });
+    }else{
+      this.back();
+    }
+
+  }
+
+  back() {
+    this.nav.navigate(['home']);
+  }
+
+  seeMap(url) {
+    window.open(url);
   }
 
 }

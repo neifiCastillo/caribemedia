@@ -1,8 +1,14 @@
-<div *ngFor="let item for arr; let i = index">
-    <ng-template>
-        <div>
-            {{item.name}}
+<div *ngIf="showInfo">
+    <div class="container m-5">
+        <div class="card ">
+            <div class="card-body">
+                <h1 class="card-title">{{selecterBussines.name}}</h1>
+                <img [src]="selecterBussines.logo">
+                <p class="card-text">{{selecterBussines.description}}</p>
+                <p class="card-text">{{selecterBussines.country}}</p>
+                <button class="btn btn-primary m-2" (click)="seeMap(selecterBussines.location)">See map</button>
+                <button class="btn btn-primary" (click)="back()"> Go back</button>
+            </div>
         </div>
-    </ng-template>
+    </div>
 </div>
-<button (click)="showInfo = !showInfo">xxxxx</button>

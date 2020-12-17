@@ -13,7 +13,8 @@
                     <h1 class="card-title">{{item.name}}</h1>
                     <p class="card-text">{{item.country}}</p>
                     <p class="card-text">{{item.description}}</p>
-                    <button class="btn btn-primary" (click)="Select(item)">Perfil</button>
+                    <button class="btn btn-primary m-2" (click)="seeMap(item.location)">See map</button>
+                    <button class="btn btn-primary m-2" (click)="Select(item)">Perfil</button>
                 </div>
             </div>
         </div>

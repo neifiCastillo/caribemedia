@@ -36,9 +36,9 @@ import { BussinesService } from './components/bussines/bussines.service';
     MatCardModule,
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes , { useHash:true} )
+    RouterModule.forRoot(routes , { useHash: true, relativeLinkResolution: 'legacy' } )
   ],
-  providers: [SearchService, BussinesService],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
