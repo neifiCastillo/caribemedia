@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+
+hr {
+    border-color: white;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.card-container {
+    width: 80%;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+body {
+    margin: 15%;
+    min-height: 15vh;
+    background-image: url(assets/img/fonde.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: absolute;
+    background-attachment: fixed;
+}
+
+body:before {
+    content: "";
+    width: 100%;
+    min-height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #52c4df, #ad55c1);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.nav ul {
+    list-style: none;
+    overflow: hidden;
+    /* Limpiamos errores de float */
+}
+
+.nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.nav ul li a {
+    display: block;
+    /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: #fff;
+    text-decoration: black;
+}
+
+.nav ul li:hover {
+    background: #3ead47;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
