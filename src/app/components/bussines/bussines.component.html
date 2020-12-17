@@ -1,13 +1,17 @@
 <div *ngIf="showInfo">
     <div class="container m-5">
-        <div class="card ">
-            <div class="card-body">
-                <h1 class="card-title">{{selecterBussines.name}}</h1>
+        <div class="card text-center m-5">
+            <div class="card-header">
                 <img [src]="selecterBussines.logo">
-                <p class="card-text">{{selecterBussines.description}}</p>
-                <p class="card-text">{{selecterBussines.country}}</p>
-                <button class="btn btn-primary m-2" (click)="seeMap(selecterBussines.location)">See map</button>
-                <button class="btn btn-primary" (click)="back()"> Go back</button>
+            </div>
+            <div class="card-body">
+                <h1><span class="badge bg-info text-dark">{{selecterBussines.name}}</span></h1>
+                <h1><span class="badge bg-info text-dark ">{{selecterBussines.country}}</span></h1>
+                <button class="btn btn-warning btn-lg m-2" (click)="seeMap(selecterBussines.location)">Location</button>
+                <button class="btn btn-primary btn-lg " (click)="back()"> Go back</button>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
             </div>
         </div>
     </div>

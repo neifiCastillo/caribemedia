@@ -4,17 +4,17 @@
         <mat-card-content>{{item.location.latitude}} {{item.location.longitude}}</mat-card-content>
     </mat-card>
 </div>-->
-<div class="container">
+<div class="container m-5">
     <div>
-        <div class="row app-container">
-            <div *ngFor="let item of displayItems; let i = index" class="card mb-2 m-3" style="width: 18rem;">
-                <img class="card-img-top" [src]="item.logo" [alt]="item.id">
+        <div class="row app-container ">
+            <div *ngFor="let item of displayItems; let i = index" class="card mb-2 m-3" style="width: 22rem;">
+                <img class="card-img-top" [src]="item.logo" [alt]="">
                 <div class="card-body">
-                    <h1 class="card-title">{{item.name}}</h1>
-                    <p class="card-text">{{item.country}}</p>
-                    <p class="card-text">{{item.description}}</p>
-                    <button class="btn btn-primary m-2" (click)="seeMap(item.location)">See map</button>
-                    <button class="btn btn-primary m-2" (click)="Select(item)">Perfil</button>
+                    <h1 class="card-title"><strong>{{item.name}}</strong></h1>
+                    <h5><strong>Country:<span class="badge bg-info text-dark">{{ item.country}}</span></strong></h5>
+                    <h5><strong>Description:<span class="badge bg-info text-dark ">{{ item.description}}</span></strong></h5>
+                    <button class="btn btn-warning btn-lg m-2" (click)="seeMap(item.location)">Location</button>
+                    <button class="btn btn-primary btn-lg m-2" (click)="Select(item)">View</button>
                 </div>
             </div>
         </div>

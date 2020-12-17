@@ -9,7 +9,7 @@ hr {
 }
 
 .card-container {
-    width: 80%;
+    width: 10%;
 }
 
 .img-circle {
@@ -78,12 +78,12 @@ body {
 body:before {
     content: "";
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     background: linear-gradient(90deg, #52c4df, #ad55c1);
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
 }
 
@@ -95,36 +95,17 @@ body:before {
     margin-right: 0;
 }
 
-.nav ul {
-    list-style: none;
-    overflow: hidden;
-    /* Limpiamos errores de float */
-}
-
-.nav ul li {
-    float: left;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-}
-
-.nav ul li a {
-    display: block;
-    /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 20px;
-    color: #fff;
-    text-decoration: black;
-}
-
-.nav ul li:hover {
-    background: #3ead47;
-}
-
 html,
 body {
-    height: 100%;
+    height: 80%;
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.navbar-toggle {
+    padding: 14px 10px;
+    border-radius: 50%;
 }

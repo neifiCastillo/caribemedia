@@ -1,11 +1,13 @@
 <div class="container m-5">
     <div>
-        <h1>What Are You Interested in shpos</h1>
-        <h3>Discover the best places to stay, eat ,shop & visit the ciry nearest to you.</h3>
+        <div class="row app-container ml-3">
+            <h1><strong>What Are You Interested in shpos</strong> </h1>
+            <h3>Discover the best places to stay, eat ,shop & visit the ciry nearest to you.</h3>
+        </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="assets/img/2180150.png" alt="" width="40" height="40"></a>
+                <a class="navbar-brand" href="#"> <img src="assets/img/2180150.png" alt="" width="60" height="60"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -14,49 +16,51 @@
                         <li class="nav-item m-3">
                             <input #termino class="form-control " placeholder="Buscar Negocio">
                         </li>
-                        <li class="nav-item m-3 mr-5">
+                        <li class="nav-item m-3 ">
                             <select class="form-select " aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Select a Country</option>
+                    <option value="1">Aruba</option>
+                    <option value="2">Anguilla</option>
+                    <option value="3">United Arab Emirates</option>
                   </select>
                         </li>
-                        <li class="nav-item m-3 ml-5">
+                        <li class="nav-item m-3 mr-2">
                             <select class="form-select " aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Select a Category</option>
+                    <option value="1">movement</option>
+                    <option value="2">food</option>
+                    <option value="3">fastfood</option>
                   </select>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-warning" type="button" (click)="buscar(termino.value)">Search now</button>
+                        <button class="btn btn-outline-warning btn-lg " type="button" (click)="buscar(termino.value)">Search now</button>
                     </form>
                 </div>
             </div>
         </nav>
-        <ul class="nav nav-pills nav-fill justify-content-around">
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link active" aria-current="page" href="#">Aparments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Restaurants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Travel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Fitness</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Hotels</a>
-            </li>
-        </ul>
+        <div class="container-center m-5">
+            <ul class="nav nav-pills nav-fill ">
+                <li class="nav-item p-2">
+                    <a class="nav-link active" aria-current="page" href="#">Aparments</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link active" href="#">Restaurants</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link active" href="#">Travel</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link  active" href="#">Events</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link active " href="#">Fitness</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link active" href="#">Hotels</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div>
